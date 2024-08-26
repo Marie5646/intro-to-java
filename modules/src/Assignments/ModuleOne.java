@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 public class ModuleOne {
 
-
-    public int x;
     public static double footToMeter(double foot){
       return foot * 0.305;
     }
@@ -35,30 +33,35 @@ public class ModuleOne {
         return number == reverse(number);
     }
 
+    public static void checkifPalindrome() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+        if(isPalindrome(number)) {
+            System.out.println("Palindrome");
+        }else {
+            System.out.println("Not a palindrome");
+        }
+    }
 
-    public static void sumMajorDiagonal(){
+    public static void sumMajorDiagonal(double[][] m) {
         Scanner input = new Scanner(System.in);
 
-        int rowsCol = 4;
-        double[][] matrix = new double[rowsCol][rowsCol];
+        int rowsCol = m.length;
 
-        System.out.println("Enter the elements of the 4x4 matrix:");
+        System.out.println("Enter a 4−by−4 matrix row by row:");
         for (int i = 0; i < rowsCol; i++) {
             System.out.println("Enter elements for row " + (i + 1) + ":");
             for (int j = 0; j < rowsCol; j++) {
-                matrix[i][j] = input.nextDouble();
+                m[i][j] = input.nextDouble();
             }
         }
         double sum = 0;
         for(int i = 0;i<rowsCol;i++){
-           sum += matrix[i][i];
+           sum += m[i][i];
         }
-        System.out.println(sum);
+        System.out.println("Sum of the elements in the major diagonal is :" + sum);
     }
-
-
-
-
 
 
 
@@ -76,12 +79,12 @@ public class ModuleOne {
         conversionTest();
 
         System.out.println("Chapter 6:  Programming Exercise 6.31");
-        System.out.println("Reversed Number : " + reverse(3342));
-        System.out.println("isPalindrome : " + isPalindrome(44322));
+        System.out.println("Write the methods with the following headers:");
+        checkifPalindrome();
 
         System.out.println("Chapter 8:  Programming Exercise 8.29");
-
-        sumMajorDiagonal();
+        double[][] matrix = new double[4][4];
+        sumMajorDiagonal(matrix);
 
     }
 }
