@@ -88,14 +88,14 @@ public class Claim {
 
             //User to represent the assigned manager
             User manager = new User();
-            manager.setFirstName("Alice");
+            manager.setFirstName("Alissa");
             manager.setLastName("Smith");
             claim.setAssignedManager(manager);
 
             //User to represent the customer
             User customer = new User();
-            customer.setFirstName("Bob");
-            customer.setLastName("Johnson");
+            customer.setFirstName("Connie");
+            customer.setLastName("Sims");
             claim.setCustomer(customer);
 
             //Claim details

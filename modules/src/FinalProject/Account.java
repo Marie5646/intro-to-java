@@ -60,7 +60,7 @@ public class Account {
         //User account
         User user = new User();
         user.setFirstName("Charlie");
-        user.setLastName("Brown");
+        user.setLastName("Curt");
         account.setUser(user);
 
         //Account details
